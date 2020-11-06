@@ -7,4 +7,17 @@
 """
 
 if __name__ == '__main__':
-    pass
+    alpha_flag = False
+    num_flag = False
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    nums = '0123456789'
+    password = input('Введите пароль: ')
+    for i in password:
+        if i.lower() in alpha:
+            alpha_flag = True
+        if i in nums:
+            num_flag = True
+    if alpha_flag and num_flag and len(password) >= 8:
+        print('Пароль сложный')
+    else:
+        print('Пароль простой')
