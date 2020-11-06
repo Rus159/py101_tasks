@@ -12,10 +12,10 @@ if __name__ == '__main__':
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     nums = '0123456789'
     password = input('Введите пароль: ')
-    for i in password:
-        if i.lower() in alpha:
+    for char in password:
+        if char.lower() in alpha:
             alpha_flag = True
-        if i in nums:
+        if char in nums:
             num_flag = True
     if alpha_flag and num_flag and len(password) >= 8:
         print('Пароль сложный')
